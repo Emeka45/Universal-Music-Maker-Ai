@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Universal Music Maker AI</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app">
+<header><div class="brand"><span class="logo">U</span><div><small>UNIVERSAL</small><h1>Music Maker <b>AI</b></h1></div></div><button class="ghost" id="libraryBtn">Library</button></header>
+<main>
+<section class="hero"><div><span class="eyebrow">CREATE WITHOUT LIMITS</span><h2>Turn an idea into a song.</h2><p>Describe the sound, choose the mood and let the generator build your next track.</p></div><div class="orb">♫</div></section>
+<section class="studio"><div class="panel"><label>What should it sound like?</label><textarea id="prompt" placeholder="Afrobeat with warm guitars, punchy drums, uplifting night-drive energy…"></textarea>
+<div class="chips" id="chips"><button>Afrobeat</button><button>Hip-Hop</button><button>Pop</button><button>Lo-fi</button><button>R&B</button><button>Electronic</button></div>
+<div class="grid"><label>Vibe<select id="mood"><option>Uplifting</option><option>Chill</option><option>Energetic</option><option>Dark</option><option>Romantic</option></select></label><label>Length<select id="length"><option value="30">30 seconds</option><option value="120">2 minutes</option><option value="180">3 minutes</option></select></label></div>
+<div class="toggles"><label><input type="checkbox" id="vocals"> Vocals</label><label><input type="checkbox" id="instrumental" checked> Instrumental</label></div>
+<button class="generate" id="generate">✦ Generate music</button><p class="note" id="status">Generation provider is ready to connect. No API key is stored in this page.</p></div>
+<div class="panel preview"><div class="cover" id="cover">U</div><div><span class="eyebrow">NOW CREATING</span><h3 id="title">Your next track</h3><p id="meta">AI music studio</p></div><div class="wave" id="wave"></div><div class="player"><button id="play">▶</button><input id="seek" type="range" min="0" max="100" value="0"></div></div></section>
+<section class="library" id="library"><div class="sectionHead"><h3>Your creations</h3><span id="count">0 tracks</span></div><div id="tracks" class="tracks"><div class="empty">Generate a track and it will appear here.</div></div></section>
+</main></div><script src="app.js"></script></body></html>
